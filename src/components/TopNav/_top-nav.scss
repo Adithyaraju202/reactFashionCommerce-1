@@ -4,9 +4,10 @@
 
 
 .header{
-    max-width: 100%;
-    box-shadow: 5px 5px 20px gray;
-    height:200px;
+  max-width: 100%;
+  box-shadow: 5px 5px 20px gray;
+  height: 150px;
+  padding-top: 36px;
     
   }
   
@@ -16,9 +17,10 @@
   
   .brand{
     color: white;
-    margin-left: 2%;
+    /* margin-left: 2%; */
     padding: 0.8em;
-    width: 10%;
+    width: 90%;
+    text-align: center;
   }
   
   .inp-container input{
@@ -79,9 +81,9 @@
   
   .cart-wishlist
   {
-    width:7%;
-    margin-top:1.7em;
-    margin-left:1em;
+    width: 5%;
+    margin-top: 1.7em;
+    margin-left: 1em;
   }
 
   .list-icon{

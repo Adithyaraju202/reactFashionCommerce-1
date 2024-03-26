@@ -22,7 +22,7 @@ console.log(categories);
   
         <div className="cat-nav-container container ">
   <ul >
-  <li className="list-items "  >
+  <li className="list-items"  >
    <Link to="/">Home</Link>
    </li>
   

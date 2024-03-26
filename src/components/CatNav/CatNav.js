@@ -4,6 +4,9 @@ import categorySlice from "../../Redux/Category/categorySlice";
 import { getCategories } from "../../Redux/Category/actions";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 const CatNav= function()
 {
 
@@ -21,10 +24,10 @@ console.log(categories);
     return(
   
         <div className="cat-nav-container container ">
-  <ul >
-  <li className="list-items"  >
-   <Link to="/">Home</Link>
-   </li>
+  <ul>
+  <button className="list-items">
+   <Link to="/"><FontAwesomeIcon icon="fa fa-home" style={{paddingRight:'6px'}}/>Home</Link>
+   </button>
   
 </ul>
         </div>

@@ -12,24 +12,28 @@
 
   .list-items{
 
-  list-style-type:none;
-  display:inline-block;
-  margin: 0.2em,1em;
-  height:2.5em;
-  padding:0.4em;
-  
+    list-style-type: none;
+    display: inline-block;
+    margin: 0.2em, 1em;
+    /* height: 2.5em; */
+    /* padding: 0.4em; */
+    background-color: white;
+
+
   a{
     text-decoration: none;
-    color:white;
+    color:black;
     font-size: 20px;
   }
-  a:hover{
-      color:#00fffd;
-  }
+  // a:hover{
+  //     color:#00fffd;
+  // }
 
-
-  @include underline-transition(1.1)
+  // @include underline-transition(1.1)
 }
 
+.list-items:hover{
+  background-color: #ffebcd;
+}
 
 }

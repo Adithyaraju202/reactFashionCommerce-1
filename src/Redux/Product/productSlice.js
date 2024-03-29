@@ -35,7 +35,25 @@ const productSlice= createSlice({
 
    state.products=filteredData;
 
-  }
+  },
+      sortByName: (state, action) => {
+      let sortByNameData = [...action.payload.products];
+      sortByNameData.sort((a, b) => a.product_name.localeCompare(b.product_name));
+      state.products = sortByNameData;
+   },
+
+   sortByNameAsc: (state, action) => {
+      let sortByNameAscData = [...action.payload.products];
+      sortByNameAscData.sort((a, b) => (a.product_name - b.product_name));
+      state.products = sortByNameAscData;
+    },
+
+    sortByNameDsc: (state, action) => {
+      let sortByNameDscData = [...action.payload.products];
+      sortByNameDscData.sort((a, b) => (b.product_name - a.product_name));
+      state.products = sortByNameDscData;
+    },
+
 },
 
   extraReducers:{
@@ -56,5 +74,5 @@ const productSlice= createSlice({
 
 });
 
-export const {filterProducts,filterByPrice}= productSlice.actions;
+export const {filterProducts,filterByPrice, sortByName, sortByNameAsc, sortByNameDsc}= productSlice.actions;
 export default productSlice.reducer;

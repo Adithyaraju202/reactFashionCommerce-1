@@ -3,7 +3,7 @@ import './_side-nav.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import accordionSlice from '../../Redux/Accordion/accordionSlice'
 import { getCategories } from '../../Redux/Category/actions'
-import { filterByPrice, filterProducts,sortByName,sortByNameAsc,sortByNameDsc } from '../../Redux/Product/productSlice'
+import { filterByPrice, filterProducts,sortByASC,sortByDSC } from '../../Redux/Product/productSlice'
 const SideNav = () => {
 
     let accordionData= useSelector(state=>state.categoryReducer.categories);
@@ -145,9 +145,8 @@ if(eachData.parent_category_id==null)
                </div>
 
                <div>
-                    <button className='btn btn-outline-dark  my-3' onClick={() => { dispatch(sortByName({ products: products })) }}> Sort By Name</button>
-                    {/* <button className='btn btn-outline-dark  my-3' onClick={() => { dispatch(sortByNameAsc({ products: products })) }}> Sort By Name Ascending</button>
-                    <button className='btn btn-outline-dark  my-3' onClick={() => { dispatch(sortByNameDsc({ products: products })) }}> Sort By Name Descending</button> */}
+                    <button className='btn btn-outline-dark  my-3' onClick={() => { dispatch(sortByASC({ products: products })) }}> Sort By Ascending</button>
+                    <button className='btn btn-outline-dark  my-3' onClick={() => { dispatch(sortByDSC({ products: products })) }}> Sort By Descending</button>
                     
                 </div>
     </div>
